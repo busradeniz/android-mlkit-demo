@@ -16,27 +16,96 @@
         android:id="@+id/btn_image_labelling"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="Image Labelling"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="10dp"
+        android:text="Image"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_landmark"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_image_labelling_cloud"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="Cloud Image Labelling"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-
-    <TextView
-        android:id="@+id/txt_result"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
+        android:layout_margin="10dp"
+        android:text="Cloud Img"
         android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_landmark"
+        app:layout_constraintStart_toEndOf="@id/btn_image_labelling" />
+
+    <Button
+        android:id="@+id/btn_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Text Rec"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_landmark"
+        app:layout_constraintStart_toEndOf="@id/btn_image_labelling_cloud" />
+
+    <Button
+        android:id="@+id/btn_text_cloud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Cloud Txt"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_landmark"
+        app:layout_constraintStart_toEndOf="@id/btn_text" />
+
+    <Button
+        android:id="@+id/btn_landmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Landmark"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_face"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Face"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_landmark" />
+
+    <Button
+        android:id="@+id/btn_barcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Barcode"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_face" />
+
+    <Button
+        android:id="@+id/btn_document"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Doc"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_barcode" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_image_labelling"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_selected" />
+        app:layout_constraintTop_toBottomOf="@+id/img_selected">
+
+        <TextView
+            android:id="@+id/txt_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
